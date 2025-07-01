@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>cec3ce4c-c012-40e1-b75f-43747b0732df</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0-preview.5.25277.114" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1-Preview.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheApp.BackgroundServices.ServiceBus\TheApp.BackgroundServices.ServiceBus.csproj" />
+    <ProjectReference Include="..\TheApp.BackgroundServices.Timer\TheApp.BackgroundServices.Timer.csproj" />
+    <ProjectReference Include="..\TheApp.DistributedConcurrency.Blob\TheApp.DistributedConcurrency.Blob.csproj" />
+    <ProjectReference Include="..\TheApp.DistributedConcurrency\TheApp.DistributedConcurrency.csproj" />
+  </ItemGroup>
+
+</Project>

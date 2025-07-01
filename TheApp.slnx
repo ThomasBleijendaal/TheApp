@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="TheApp.BackgroundServices.ServiceBus/TheApp.BackgroundServices.ServiceBus.csproj" Id="56a10e58-ed72-410d-b2de-9d4312c43c65" />
+  <Project Path="TheApp.BackgroundServices.Timer/TheApp.BackgroundServices.Timer.csproj" Id="da541b8e-9007-481b-84ec-2f6fcf54a6e8" />
+  <Project Path="TheApp.DistributedConcurrency.Blob/TheApp.DistributedConcurrency.Blob.csproj" Id="535d111c-9157-44d0-8a55-d27f2c033593" />
+  <Project Path="TheApp.DistributedConcurrency/TheApp.DistributedConcurrency.csproj" Id="6d7af9c5-c4e4-4990-a0fa-75183b620f73" />
+  <Project Path="TheApp.ServiceResolver/TheApp.ServiceResolver.csproj" Id="ef243a5a-b782-4acf-99c1-3944fcfe70e7" />
+  <Project Path="TheApp/TheApp.csproj" />
+</Solution>
