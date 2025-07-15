@@ -6,5 +6,5 @@ public record TimerConfig
 {
     public required string CronExpression { get; init; }
 
-    public SemaphoreType ConcurrencyType { get; set; } = SemaphoreType.SingletonPerInstance;
+    public SemaphoreType ConcurrencyType { get; set; } = SemaphoreType.Unbounded;
 }

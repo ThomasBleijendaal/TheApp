@@ -40,6 +40,7 @@ internal class MessageBackgroundService : BackgroundService
 
                 await scope.Service.HandleAsync(stoppingToken);
             }
+            catch (TaskCanceledException) { }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error during queue");

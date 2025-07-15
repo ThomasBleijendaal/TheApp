@@ -10,5 +10,5 @@ public record MessageHandlingConfig
 
     public int MaxDegreeOfParallelism { get; set; } = 10;
 
-    public SemaphoreType ConcurrencyType { get; set; } = SemaphoreType.SingletonPerInstance;
+    public SemaphoreType ConcurrencyType { get; set; } = SemaphoreType.Unbounded;
 }

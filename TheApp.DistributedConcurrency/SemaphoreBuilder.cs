@@ -9,13 +9,13 @@ public static class SemaphoreBuilder
 {
     public static IDistributedConcurrencySemaphore Build(IServiceProvider sp, SemaphoreType type, string ticket)
     {
-        if (type == SemaphoreType.SingletonPerInstance)
+        if (type == SemaphoreType.Unbounded)
         {
-            return new SingletonPerInstanceConcurrencySemaphore();
+            return new UnboundedSemaphore();
         }
-        else if (type == SemaphoreType.GlobalSingleton)
+        else if (type == SemaphoreType.Singleton)
         {
-            return new GlobalSingletonConcurrencySemaphore(sp.GetRequiredService<SemaphoreService>(), ticket);
+            return new SingletonConcurrencySemaphore(sp.GetRequiredService<SemaphoreService>(), ticket);
         }
         else
         {

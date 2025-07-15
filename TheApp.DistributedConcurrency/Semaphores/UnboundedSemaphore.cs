@@ -2,8 +2,7 @@
 
 namespace TheApp.DistributedConcurrency.Semaphores;
 
-// TODO: this should work with a semaphore slim
-internal class SingletonPerInstanceConcurrencySemaphore : IDistributedConcurrencySemaphore
+internal class UnboundedSemaphore : IDistributedConcurrencySemaphore
 {
     public Task<IAsyncDisposable> AcquireAsync(CancellationToken token)
         => Task.FromResult<IAsyncDisposable>(new CompletedDisposable());

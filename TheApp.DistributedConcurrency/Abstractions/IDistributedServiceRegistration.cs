@@ -2,7 +2,7 @@
 
 public interface IDistributedServiceRegistration
 {
-    IDistributedServiceRegistration AsGlobalSingleton();
+    IDistributedServiceRegistration AsSingleton();
 
-    IDistributedServiceRegistration AsSingletonPerInstance();
+    IDistributedServiceRegistration Unbounded();
 }

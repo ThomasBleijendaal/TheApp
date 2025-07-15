@@ -1,21 +1,26 @@
-﻿using TheApp.BackgroundServices.Timer.Abstractions;
+﻿using DurableMediator.HostedService;
+using TheApp.BackgroundServices.Timer.Abstractions;
+using TheApp.Workflow;
 
 namespace TheApp.Timer;
 
 public class TimerProcessor : ITimerProcessor
 {
     private readonly ILogger<TimerProcessor> _logger;
+    private readonly IWorkflowService _workflowService;
 
     public TimerProcessor(
-        ILogger<TimerProcessor> logger)
+        ILogger<TimerProcessor> logger,
+        IWorkflowService workflowService)
     {
         _logger = logger;
+        _workflowService = workflowService;
     }
 
-    public Task RunAsync(CancellationToken token)
+    public async Task RunAsync(CancellationToken token)
     {
         _logger.LogInformation("Timer invoked");
 
-        return Task.CompletedTask;
+        await _workflowService.StartWorkflowAsync(new LogWorkflowRequest(DateTimeOffset.UtcNow.ToString()));
     }
 }

@@ -67,6 +67,7 @@ internal class TimerBackgroundService<TProcessor> : BackgroundService
                 // TODO: in some cases this gets invoked too often
                 await scope.Service.RunAsync(stoppingToken);
             }
+            catch (TaskCanceledException) { }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error during timer");

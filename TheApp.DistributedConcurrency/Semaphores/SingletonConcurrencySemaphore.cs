@@ -3,12 +3,12 @@ using TheApp.DistributedConcurrency.Internals;
 
 namespace TheApp.DistributedConcurrency.Semaphores;
 
-internal class GlobalSingletonConcurrencySemaphore : IDistributedConcurrencySemaphore
+internal class SingletonConcurrencySemaphore : IDistributedConcurrencySemaphore
 {
     private readonly SemaphoreService _semaphoreService;
     private readonly string _ticket;
 
-    public GlobalSingletonConcurrencySemaphore(
+    public SingletonConcurrencySemaphore(
         SemaphoreService semaphoreService,
         string ticket)
     {

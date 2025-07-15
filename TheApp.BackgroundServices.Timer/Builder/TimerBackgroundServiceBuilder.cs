@@ -33,15 +33,15 @@ internal class TimerBackgroundServiceBuilder<TProcessor> : IDistributedServiceRe
         return new TimerBackgroundService<TProcessor>(semaphore, _config, resolver, logger);
     }
 
-    public IDistributedServiceRegistration AsGlobalSingleton()
+    public IDistributedServiceRegistration AsSingleton()
     {
-        _config.ConcurrencyType = SemaphoreType.GlobalSingleton;
+        _config.ConcurrencyType = SemaphoreType.Singleton;
         return this;
     }
 
-    public IDistributedServiceRegistration AsSingletonPerInstance()
+    public IDistributedServiceRegistration Unbounded()
     {
-        _config.ConcurrencyType = SemaphoreType.SingletonPerInstance;
+        _config.ConcurrencyType = SemaphoreType.Unbounded;
         return this;
     }
 }

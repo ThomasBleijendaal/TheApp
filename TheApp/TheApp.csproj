@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TheApp.BackgroundServices.ServiceBus\TheApp.BackgroundServices.ServiceBus.csproj" />
     <ProjectReference Include="..\TheApp.BackgroundServices.Timer\TheApp.BackgroundServices.Timer.csproj" />
+    <ProjectReference Include="..\TheApp.BackgroundServices.Workflow\TheApp.BackgroundServices.Workflow.csproj" />
     <ProjectReference Include="..\TheApp.DistributedConcurrency.Blob\TheApp.DistributedConcurrency.Blob.csproj" />
     <ProjectReference Include="..\TheApp.DistributedConcurrency\TheApp.DistributedConcurrency.csproj" />
   </ItemGroup>

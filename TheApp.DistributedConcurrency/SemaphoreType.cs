@@ -2,7 +2,6 @@
 
 public enum SemaphoreType
 {
-    // TODO: unbounded?
-    SingletonPerInstance,
-    GlobalSingleton
+    Unbounded,
+    Singleton
 }
